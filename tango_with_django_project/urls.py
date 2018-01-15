@@ -1,4 +1,4 @@
-"""RangobySarthakKapoor URL Configuration
+"""tango_with_django_project URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -19,8 +19,11 @@ from django.contrib import admin
 from django.conf.urls import include
 from rango import views
 
+
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^$', views.about, name='about'),
     url(r'^rango/', include('rango.urls')),
+    url(r'^about/', include('rango.urls')),
     url(r'^admin/', admin.site.urls),
 ]
