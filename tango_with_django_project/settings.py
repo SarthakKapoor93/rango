@@ -53,7 +53,7 @@ ROOT_URLCONF = 'tango_with_django_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['RangobySarthakKapoor/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
