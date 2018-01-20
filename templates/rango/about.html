@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+{% load staticfiles %} <!-- New line -->
+
+<html>
+
+<head>
+
+<title>Rango</title>
+<!-- CSS -->
+<link rel="stylesheet" href="{% static "css/base.css" %}" />
+<!-- JavaScript -->
+<script src="{% static "js/jquery.js" %}"></script>
+
+</head>
+
+<body>
+<h1>About</h1>
+
+<div>
+    This is the about page! <br />
+    <strong> {{ boldmessage }} </strong> <br  />
+</div>
+<div>
+ 
+  <a href="/rango/index/">Index</a><br />
+  <img src="{% static "images/Signature.jpg" %}"
+   alt="Picture of Signature" /> <!-- New line -->
+
+</div>
+</body>
+
+</html>
