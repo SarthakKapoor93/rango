@@ -8,7 +8,7 @@ def index(request):
 
 
 def about(request):
-    context_dict = {"This tutorial has been put together by Sarthak Kapoor"}
+    context_dict = {'boldmessage': "This tutorial has been put together by Sarthak Kapoor"}
     return render(request, 'rango/about.html', context=context_dict)
 
 
