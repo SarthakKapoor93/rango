@@ -1,26 +1,24 @@
-<!DOCTYPE html>
-
-{% load staticfiles %} <!-- New line -->
-
-<html>
-
-<head>
-
-<title>Rango</title>
-     <div>hey there partner!</div>
-<!-- CSS -->
-<link rel="stylesheet" href="{% static "css/base.css" %}" />
-<!-- JavaScript -->
-<script src="{% static "js/jquery.js" %}"></script>
-
-</head>
+ <!DOCTYPE html>
+ {% load staticfiles %}
+ <html>
+   <head>
+     <title>Rango</title>
+     <link rel="stylesheet" href="{% static "css/base.css" %}">
+     <script src="{% static "js/jquery.js" %}"></script>
+    </head>
 <body>
 <h1>Rango says...</h1>
+<div>hey there partner!</div>
 
-<div>
-    hey there partner! <br />
-    <strong> {{ boldmessage }} </strong> <br  />
-</div>
+{% if categories %}
+ <ul>
+       {% for category in categories %}
+       <li>{{ category.name }}</li>
+       {% endfor %}
+       </ul>
+       {% else %}
+       <strong>There are no categoies present</strong>
+       {% endif %}
 <div>
 
    <a href="/rango/about/">About</a><br />
