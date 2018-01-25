@@ -1,20 +1,13 @@
-<!DOCTYPE html>
+{% extends 'rango/base.html' %}
 
 {% load staticfiles %} <!-- New line -->
 
-<html>
 
-<head>
+{% block title_block %}
+  {{ category.name }}
+{% endblock %}
 
-<title>Rango</title>
-<!-- CSS -->
-<link rel="stylesheet" href="{% static "css/base.css" %}" />
-<!-- JavaScript -->
-<script src="{% static "js/jquery.js" %}"></script>
-
-</head>
-
-<body>
+{% block body_block %}
 <h1>Rango says...</h1>
 
 <div>
@@ -23,11 +16,9 @@
 </div>
 <div>
  
-   <a href="{% url 'index' %}">Index</a><br />
+
    <img src="{{ MEDIA_URL }}cat.jpg" alt="a cat" />
    <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />  
   
 </div>
-</body>
-
-</html>
+{% endblock %}
