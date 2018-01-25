@@ -7,8 +7,8 @@
   </head>
   <body>
     <div>
-       <a href="/rango/">Index</a>
-       <a href="/rango/add_page/{{ category_name_slug }}">Add a Page</a>
+       <a href="{% url 'index' %}">Index</a>
++      <a href="{% url 'add_page' category_name_slug %}">Add a Page</a>
        <br />
       {% if category %}
         <h1>{{ category.name }}</h1>
