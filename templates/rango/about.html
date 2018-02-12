@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block body_block %}
-<h1>Rango says...</h1>
+<h1>Rango says here is the about page</h1>
 
 <div>
     This is the about page! <br />
@@ -16,10 +16,9 @@
     <p>visits: {{ visits }}</p>
 </div>
 <div>
- 
 
    <img src="{{ MEDIA_URL }}cat.jpg" alt="a cat" />
-   <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />  
+   <img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" />
   
 </div>
 {% endblock %}
